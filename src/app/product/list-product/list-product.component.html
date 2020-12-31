@@ -1,0 +1,19 @@
+<h1>List Product</h1>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th colspan="2">Action</th>
+  </tr>
+  <ng-container *ngFor="let product of products">
+    <tr>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td><a [routerLink]="['/update-product/',product.id]">Edit</a></td>
+      <td><a [routerLink]="['/delete-product/',product.id]">Delete</a></td>
+    </tr>
+  </ng-container>
+</table>
